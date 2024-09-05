@@ -2,9 +2,8 @@
     "rewrites": [
       {
         "source": "/",
-        "destination": "/ww_final/index.html"
+        "destination": "/subfolder/index.html"
       }
-    ],
-    "public": "/ww_final"  
+    ]
   }
   
