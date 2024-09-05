@@ -5,6 +5,6 @@
         "destination": "/ww_final/index.html"
       }
     ],
-    "public": "/ww_final"  // Optional: Specifies the public directory if using static files
+    "public": "/ww_final"  
   }
   
