@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/",
-        "destination": "/subfolder/index.html"
+        "destination": "/ww_final/index.html"
       }
     ]
   }
