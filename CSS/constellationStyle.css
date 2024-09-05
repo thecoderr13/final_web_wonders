@@ -1,0 +1,590 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+
+.menu{
+    display: flex;
+    margin-top: 15vh;
+    margin-left: 28vw;
+
+}
+
+.part2{
+    display: none;
+}
+
+.menu-content{
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    width: 30vh;
+    height: 5vh;
+    padding-left: 2%;
+    padding-top: 1%;
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none;
+}
+
+#what:hover{
+    display: block;
+    background-color: #cccccc63;
+}
+#season:hover{
+    display: block;
+    background-color: #cccccc63;
+}
+#cz:hover{
+    display: block;
+    background-color: #cccccc63;
+}
+
+.starting{
+    background-image: url(../Images/constellationbg.jpeg);
+    height: 100vh;
+}
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+
+#constellation{
+    animation: con 2s;
+}
+
+#constellation2{
+    position: absolute;
+    animation: con2 2s;
+    margin-left: 40vw;
+    text-align: center;
+    margin-top: 68vh;
+}
+@keyframes con2{
+    from{
+        margin-top: 40vh;
+    }
+    to{
+        margin-top: 68vh;
+    }
+    
+}
+
+@keyframes con {
+    from{
+        opacity: 0;
+        margin-top: 8vh;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+#quote{
+    animation: quo 2s;
+}
+
+@keyframes quo{
+    from{
+        opacity: 0;
+        margin-top: 1vh;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+#first{
+    margin-top: 15vh;
+    text-decoration: none;
+}
+#second{
+    margin-top: 25vh;
+    text-decoration: none;
+}
+#third{
+    margin-top: 15vh;
+    text-decoration: none;
+}
+
+.explore{
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    width: 30vh;
+    height: 5vh;
+    padding-left: 2%;
+    padding-top: 1%;
+    font-weight: 600;
+    font-size: larger;
+    margin-left: 8vw;
+    animation: exp 2s;
+}
+@keyframes exp{
+    from{
+        opacity: 0;
+        margin-top: 1vh;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+
+.explore:hover{
+    display: block;
+    background-color: #cccccc63;
+}
+
+.heading{
+    width: 30vw;
+    height: 40vh;
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 35vw;
+    margin-top: 38vh;
+    position: absolute;
+    /*display: none;*/
+    
+}
+
+.first_heading{
+    font-style: Monospace;
+    font-weight: 600;
+    animation: heading 6s 1;
+    color: whitesmoke;
+    padding-left: 1.8%;
+    font-size: xx-large;
+}
+@keyframes heading {
+    from{
+        margin-left: 100%;
+        opacity:0;
+    }
+    to{
+        margin-left: 0%;
+        opacity:1;
+    }
+}
+
+@keyframes my_robot{
+    from{
+        margin-top: 3%;
+        margin-left: 0%;
+        transform: rotate(180deg);
+    }
+    to{
+        margin-left: 86%;
+        transform: rotate(360deg);
+    }
+}
+
+.short_answer{
+    border: 1px solid white;
+    font-size: large;
+    height: 8%;
+    font-family: SpaceMono;
+
+}
+
+.container{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 65%;
+    margin-top: 2.5%;
+}
+
+.content{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.2);
+    color: #f1f1f1;
+    width: 96.9%;
+    padding: 20px;
+}
+
+.my-slides{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 16vw;
+    height: 75%;
+    margin-top: 2%;
+    display: none;
+
+}
+
+.constellation-name{
+    position: absolute;
+    bottom: 0;
+    margin-top: 2%;
+    margin-left: auto;
+    color: #f1f1f1;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 8%;
+    padding-bottom: 3%;
+}
+
+
+.left_button{
+    position: absolute;
+    background-color: black;
+    color: whitesmoke;
+    width: 5%;
+    height: 5%;
+    margin-left: 16.6%;
+    margin-top: -18%;
+}
+
+.right_button{
+    position: absolute;
+    background-color: black;
+    color: whitesmoke;
+    width: 5%;
+    height: 5%;
+    margin-left: 74%;
+    margin-top: -18%;
+}
+
+#myImage {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 35%;
+    width: 24%;
+    margin-top: 2.5%;
+    z-index: 0;
+}
+  
+#myImage:hover {
+    opacity: 0.7;
+} 
+
+.modal{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+    padding-top: 100px;
+
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+.close:hover,
+.close:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.modal-content{
+    display: block;
+    margin: auto;
+    width: 60%;
+    margin: auto;
+    height: 60%;
+
+}
+
+.caption{
+    display: block;
+    margin: auto;
+    color: #ccc;
+    text-align: center;
+    width: 80%;
+    height: 150px;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.modal-content .caption{
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+/*.idk{
+    height: 100vh;
+    width: 100vw;
+}*/
+
+
+.img-magnifier-container {
+  position:relative;
+  /*margin-left: 40vw;*/
+  margin-top: 4vh;
+  width: 98vw;
+  height: 90vh;
+
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+
+/* For screens smaller than 600px (mobile devices) */
+@media screen and (max-width: 600px) {
+    .menu {
+        margin-left: 5vw;
+        margin-top: 5vh;
+        flex-direction: column;
+    }
+
+    .menu-content {
+        width: 80vw;
+        height: 6vh;
+        font-size: medium;
+    }
+
+    .starting {
+        background-image: url(constellationbg.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .scroll-container {
+        padding: 5px;
+    }
+
+    .my-slides {
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+    .left_button,
+    .right_button {
+        width: 8%;
+        height: 8%;
+        margin-top: -20%;
+        font-size: 24px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        margin-top: 5%;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: auto;
+    }
+
+    .caption {
+        font-size: large;
+        height: auto;
+    }
+
+    .img-magnifier-glass {
+        width: 60px;
+        height: 60px;
+    }
+
+    .explore{
+        margin-left: -24%;
+    }
+
+    .starting{
+        /*margin-left: 50px;*/
+        width: 450px;
+        height: 800px;
+    }
+
+    #constellation{
+        margin-left: -85px;
+        margin-top: -50%;
+
+    }
+
+    #quote{
+        margin-left: 10px;
+    }
+
+    .short_answer{
+        height: 205px;
+    }
+
+    .my-slides{
+        width: 440px;
+        margin-left: -0.1%;
+    }
+
+    .right_button{
+        margin-top: -75%;
+        margin-left: 318px;
+    }
+
+    .left_button{
+        margin-top: -75%;
+        margin-left: 0%;
+    }
+
+    #constellation2{
+        margin-top: 10px;
+    }
+}
+
+/* For screens between 600px and 768px (tablets) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .menu {
+        margin-left: 10vw;
+    }
+
+    .menu-content {
+        width: 50vw;
+        height: 6vh;
+        font-size: large;
+    }
+
+    .starting {
+        background-image: url(constellationbg.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .scroll-container {
+        padding: 10px;
+    }
+
+    .my-slides {
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+    .left_button,
+    .right_button {
+        width: 6%;
+        height: 6%;
+        margin-top: -15%;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        margin-top: 3%;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .caption {
+        font-size: large;
+    }
+
+    .img-magnifier-glass {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* For screens larger than 768px (desktops and larger devices) */
+@media screen and (min-width: 768px) {
+    .menu {
+        margin-top: 15vh;
+        margin-left: 28vw;
+    }
+
+    .menu-content {
+        width: 30vh;
+        height: 5vh;
+        font-size: larger;
+    }
+
+    .starting {
+        background-image: url(constellationbg.jpeg);
+    }
+
+    .scroll-container {
+        padding: 10px;
+    }
+
+    .my-slides {
+        width: 80%;
+        margin-left: 16vw;
+    }
+
+    .left_button,
+    .right_button {
+        width: 5%;
+        height: 5%;
+        margin-top: -18%;
+    }
+
+    .container {
+        width: 80%;
+        height: 65%;
+        margin-top: 2.5%;
+    }
+
+    .content {
+        width: 96.9%;
+    }
+
+    .modal-content {
+        width: 60%;
+    }
+
+    .caption {
+        font-size: xx-large;
+    }
+
+    .img-magnifier-glass {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+

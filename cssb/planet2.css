@@ -1,0 +1,443 @@
+/* Base Styles */
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: black;
+}
+
+main {
+    display: flex;
+    white-space: nowrap;
+    padding: 10px;
+    overflow-x: auto;
+    scrollbar-color: rgb(0, 0, 0) rgb(56, 56, 57);
+}
+
+.card {
+    flex: 0 0 auto;
+    height: 70vh;
+    width: 50vw;
+    margin: 50px 100px 7vh;
+    align-self: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    white-space: normal;
+    overflow: hidden;
+    transition: transform 7s ease-in;
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+}
+
+.card-content {
+    background-color: rgba(0, 0, 0, 0.744);
+    position: relative;
+    font-size: 2.5vh;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 2vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+    bottom: 100%;
+    height: 100%;
+    width: 100%;
+    border: 9px rgb(255, 255, 255) solid;
+    border-radius: 9px;
+    transition-timing-function: ease-in-out;
+}
+
+.card:hover .card-content {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+}
+
+.card:hover {
+    transform: scale(1.15);
+}
+
+#header {
+    text-align: center;
+    font-family: 'Bodoni Moda SC', serif;
+    color: rgb(0, 0, 0);
+    font-size: 7vh;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-bottom: 5vh;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    align-self: center;
+    border-bottom: 0.5vh white solid;
+    border-left: 0.5vh white solid;
+    border-radius: 5px;
+    height: 70vh;
+    width: 50vw;
+    text-align: center;
+    background-color: transparent;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    margin-top: 5vh;
+}
+
+#form input {
+    background-color: transparent;
+    height: 5%;
+    width: 25%;
+    border: none;
+    border-bottom: 0.8px solid rgb(255, 255, 255);
+}
+
+button {
+    height: 7vh;
+    width: 17vh;
+    margin-right: 7vh;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-family: 'Quicksand', serif;
+    font-size: 2.5vh;
+    position: relative;
+    top: 8vh;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#satellite_tracker_main {
+    color: rgb(255, 255, 255);
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    margin-top: 9vh;
+    margin-bottom: 5vh;
+    flex-direction: row;
+}
+
+#satellite_tracker_header {
+    height: 50vh;
+    width: 30vw;
+    text-align: center;
+    color: white;
+    font-size: 8vh;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 2vh;
+    font-weight: 800;
+    font-style: italic;
+    position: relative;
+    animation: lastone ease-in;
+    animation-timeline: view();
+    animation-range-start: entry + 5vh;
+    animation-range-end: entry + 75vh;
+}
+
+@keyframes lastone {
+    from {
+        left: 30vh;
+    }
+    to {
+        left: 2vh;
+    }
+}
+
+.info {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.9vh;
+    color: rgba(195, 191, 191, 0.991);
+    position: relative;
+    bottom: 0;
+    top: 15vh;
+}
+
+#intro_div {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin-bottom: 15vh;
+    flex-direction: column;
+}
+
+#mainheading {
+    color: white;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    font-size: 13vh;
+    position: relative;
+    width: fit-content;
+    left: 65vh;
+    top: 30vh;
+    animation: main_head1 2s ease-in 0s, main_head2 5s ease-in-out 6s forwards;
+}
+
+@keyframes main_head1 {
+    0% {
+        top: 35vh;
+        color: transparent;
+    }
+    100% {
+        top: 30vh;
+        color: white;
+    }
+}
+
+@keyframes main_head2 {
+    100% {
+        left: 2vh;
+    }
+}
+
+#quote {
+    position: relative;
+    color: whitesmoke;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    width: 40vw;
+    font-size: 3vh;
+    left: 65vh;
+    bottom: 122vh;
+    font-style: italic;
+    animation: quote_anime1 2s ease-in-out, quote_anime2 2s ease-out 6s forwards;
+}
+
+@keyframes quote_anime1 {
+    0% {
+        bottom: 127vh;
+        color: transparent;
+    }
+    100% {
+        color: whitesmoke;
+        bottom: 122vh;
+    }
+}
+
+@keyframes quote_anime2 {
+    100% {
+        opacity: 0;
+    }
+}
+
+#author {
+    position: relative;
+    left: 70vh;
+    font-style: normal;
+    font-weight: 600;
+}
+
+#description_intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: antiquewhite;
+    font-size: 2.5vh;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, monospace;
+    letter-spacing: 2px;
+    width: 45vw;
+    height: 23vh;
+    border-left: 2px white solid;
+    left: 2vh;
+    bottom: 93vh;
+    padding-left: 2vh;
+    visibility: hidden;
+    animation: descrip_anime 5s ease-in-out 6s forwards;
+}
+
+@keyframes descrip_anime {
+    0% {
+        color: transparent;
+        left: 500vh;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+#satellite_png {
+    position: relative;
+    left: 130vh;
+    opacity: 0;
+    visibility: hidden;
+    height: 125vh;
+    width: 55vw;
+    animation: satellite_zoop 5s ease-in-out 9s forwards;
+    bottom: 45vh;
+}
+
+@keyframes satellite_zoop {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#classification {
+    color: white;
+    font-size: 7vh;
+    font-weight: 400;
+    font-family: "Space Mono", monospace;
+    letter-spacing: 2px;
+    height: auto;
+    width: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    opacity: 0;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#classification.visible {
+    animation: reveal 3s forwards;
+}
+
+@keyframes reveal {
+    0% {
+        clip-path: inset(0 50% 0 50%);
+        opacity: 0;
+    }
+    100% {
+        clip-path: inset(0 0% 0 0%);
+        opacity: 1;
+    }
+}
+
+#orbit {
+    height: 50vh;
+    width: auto;
+    overflow: hidden;
+    margin-bottom: 5vh;
+}
+
+#big_orbit {
+    position: relative;
+    color: rgb(58, 58, 58);
+    font-size: 35vh;
+    font-weight: 1000;
+    opacity: 0;
+}
+
+#big_orbit.animeorbit {
+    animation: orbitbig 1s ease-in forwards;
+}
+
+@keyframes orbitbig {
+    100% {
+        opacity: 1;
+    }
+}
+
+.orbit_ele {
+    color: white;
+    font-size: 3vh;
+    font-family: 'Quicksand', monospace;
+    font-weight: 700;
+    text-align: center;
+}
+
+.orbit_desc {
+    color: white;
+    font-size: 2.5vh;
+    font-family: 'Quicksand', monospace;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 60vw;
+        margin: 50px 50px 5vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 70vw;
+        margin: 30px 30px 4vh;
+    }
+
+    .title, h3 {
+        font-size: 3vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80vw;
+        margin: 20px 20px 3vh;
+    }
+
+    .title, h3 {
+        font-size: 2.5vh;
+    }
+
+    #header {
+        font-size: 5vh;
+        margin-bottom: 3vh;
+    }
+
+    #form {
+        width: 90vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 90vw;
+        margin: 10px 10px 2vh;
+    }
+
+    .title, h3 {
+        font-size: 2vh;
+    }
+
+    #header {
+        font-size: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    #form {
+        width: 100vw;
+        height: auto;
+    }
+
+    button {
+        height: 5vh;
+        width: 15vh;
+        font-size: 2vh;
+    }
+
+    #quote {
+        font-size: 2.5vh;
+        left: 5vw;
+        bottom: 100vh;
+    }
+
+    #author {
+        left: 5vw;
+    }
+
+    #satellite_png {
+        height: 75vh;
+        width: 90vw;
+        left: 5vw;
+        bottom: 35vh;
+    }
+}

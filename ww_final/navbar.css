@@ -1,0 +1,80 @@
+.navbar {
+    font-family: 'Space Mono', monospace;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8.5vh; /* Height of the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw; /* Padding on the left and right */
+    backdrop-filter: blur(8px); /* Optional: Adds a blur effect */
+    margin-bottom: 0.5vh;
+   
+    z-index: 1000; /* Ensure navbar is on top */
+}
+
+.navbar-logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-image {
+   
+    height: 7vh; /* Height of the logo image */
+    width: 7vh;
+    margin-right: 1vw; /* Space between image and text */
+}
+
+.logo-text {
+    font-size: 2.1vw; /* Font size for the logo text */
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.5vw;
+}
+
+.navbar-menu a,
+.navbar-home a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vw; /* Font size for menu and home links */
+    padding: 0 1vw; /* Padding around links */
+}
+
+.navbar-menu {
+    margin-right: 1vw; /* Space between menu and home */
+}
+
+.navbar-home {
+    margin-left: 1vw; /* Space between menu and home */
+    margin-right: 2vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        height: 5vh; /* Adjust height for smaller screens */
+        padding: 0 4vw; /* Adjust padding for smaller screens */
+    }
+
+    .logo-image {
+        height: 6vh; /* Adjust height for smaller screens */
+    }
+
+    .logo-text {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    .navbar-menu a,
+    .navbar-home a {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+}
+i{
+    font-size:3.3vh;
+}

@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;  /* Full viewport width */
+    margin: 0;
+    background-color: black; /* Background color */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100vw; /* Adjust width to fit container */
+    background-color: transparent;
+}
+
+.circle {
+    width: 30vw; /* Circle size relative to viewport width */
+    height: 30vw; /* Circle size relative to viewport width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3); /* Shadow in terms of viewport width */
+    margin-right: 7vw; /* Space between the circle and the side div */
+    margin-left: 20vw;
+    overflow: visible;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sideDiv {
+    width: 37vw; /* Width of the new division */
+    height: 37vw; /* Height of the new division */
+    padding: 2vw;
+    border: 0.2vw solid #0A2647; /* Border width in viewport width */
+    border-radius: 10%;
+    background-image: radial-gradient(#2C74B3, #205295, #144272, #0A2647);
+    display: flex;
+    color: white;
+    font-size: 1.5vw; /* Font size relative to viewport width */
+    font-weight: normal;
+    box-shadow: 0 0.5vw rgba(0, 0, 0, 0.2); /* Shadow in viewport width */
+    text-align: center;
+    line-height: 2.5vw;
+    word-spacing: 0.5vw;
+    font-family: 'Space Mono' , monospace;
+    margin-right: 3vw;
+    overflow: hidden; /* Hide overflow to create typing effect */
+    position: relative;
+    opacity: 0; /* Start with the text hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Position buttons independently */
+    left: 5vw; /* Space between buttons and extreme left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.colorButton {
+    background-image: radial-gradient(#2C74B3, #205295, #144272, #0A2647);
+    background-color: black;
+    padding: 1.5vh 2vw; /* Padding in terms of viewport units */
+    margin: 1.4vh 0; /* Margin in terms of viewport units */
+    font-size: 2.35vh; /* Font size in terms of viewport units */
+    cursor: pointer;
+    border: 0.2vw solid #0A2647; /* Border width in viewport width */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Space Mono' , monospace;
+    font-weight: normal;
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 0.8vw; /* Border radius in viewport width */
+    box-shadow: 0 0.4vw rgba(0, 0, 0, 0.2); /* Shadow in viewport width */
+}
+
+.colorButton:hover {
+    box-shadow: 0 0.2vw rgba(0, 0, 0, 0.9); /* Slight shadow on hover */
+}
+
+.back-vid{
+    margin-top: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-vid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-vid{
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .sideDiv{
+        width: 400px;
+        height: 270px;
+        font-size: 10px;
+        padding: 10px;
+        margin-top: 2px;
+    }
+}
+
+
